@@ -47,7 +47,7 @@ ejecutarFunction:false<br>
 
 Ejemplo set del plugin boton:
 <br>
-$("#btn_xxx").jquery_controller({<br>
+$("#btn_xxx").jquery_controllerV2({<br>
   		tipo:'inserta/edita',<br> 
   		titulo_label:'Nuevo Contenido'<br> 
   		nom_modulo:'contenido',<br>
@@ -57,14 +57,14 @@ $("#btn_xxx").jquery_controller({<br>
   		ejecutarFunction:true,<br>
   		functionResCrear:function(){<br>
                 
-                console.log('Ejecutando luego de Insertar!!!');<br>
-                console.log('El ultimo insertado fue '+this.id_resCrear);<br>
+                console.log('Ejecutando luego de Insertar!!!');
+                console.log('El ultimo insertado fue '+this.id_resCrear);
                 
-                //------------------------------------------------------------------------------------------------------------<br>
-	 	},<br>
-	 	functionResEditar:function(){<br>
-            console.log('Se editó registro: '+this.id_resCrear);<br>
-            console.log('Ejecutando luego de Editar!!!');<br>                
-        },<br>
-  	});<br>
+                //------------------------------------------------------------------------------------------------------------
+	 	},
+	 	functionResEditar:function(){
+            console.log('Se editó registro: '+this.id_resCrear);
+            console.log('Ejecutando luego de Editar!!!');                
+        },
+  	});
 
