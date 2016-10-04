@@ -18,30 +18,16 @@ nom_modulo:'', //el nombre del modulo usado<br>
 titulo_label:'', //titulo de la ventana del modal<br>
 nom_tabla:'', //nombre de la tabla en la BD<br>
 //-----------------------------------------------------------------<br>
-//Datos resultado funcion crear<br>
-id_resCrear:'', //resultado de la insercion del registro(last_id)<br>
-functionResCrear:function(){<br>
-    console.log('El ultimo creado fue: '+ajustes.id_resCrear);<br>
-    console.log('Ejecutando luego de Insertar!!!');<br>                
-},<br>
-//----------------------------------------------------------------- <br>           
-functionResEliminar:function(){<br>
-    //console.log('El eliminar registro: '+ajustes.id_resCrear);<br>
-    console.log('Ejecutando luego de Eliminar!!!');<br>                
+
+//-----------------------------------------------------------------<br>
+//CallBacks            
+functionAfter:function(data){<br>               
+    console.log('Ejecutando luego de Cualquier cosa!!!');<br>                
+},<br>            
+functionBefore:function(ajustes){<br>                
+    console.log('Ejecutando antes de cualquier cosa!!!');<br>                
 },<br>
 //-----------------------------------------------------------------<br>
-functionResCarga:function(){<br>
-    //console.log('El eliminar registro: '+ajustes.id_resCrear);<br>
-    console.log('Ejecutando luego de Cargar!!!'); <br>               
-},<br>
-functionResEditar:function(){<br>
-    console.log('Se editó registro: '+ajustes.id_resCrear);<br>
-    console.log('Ejecutando luego de Editar!!!');<br>                
-},<br>
-//-----------------------------------------------------------------<br>
-//variable que dice si hay que ejecutar una funcion<br>
-//esto depende del tipo<br>
-ejecutarFunction:false<br>
 
 <br>
 
@@ -53,18 +39,12 @@ $("#btn_xxx").jquery_controllerV2({<br>
   		nom_modulo:'contenido',<br>
   		nom_tabla:'contenido',<br>
   		subida:true,<br>
-  		recarga:true,<br>
-  		ejecutarFunction:true,<br>
-  		functionResCrear:function(){<br>
-                
-                console.log('Ejecutando luego de Insertar!!!');
-                console.log('El ultimo insertado fue '+this.id_resCrear);
-                
-                //------------------------------------------------------------------------------------------------------------
-	 	},
-	 	functionResEditar:function(){
-            console.log('Se editó registro: '+this.id_resCrear);
-            console.log('Ejecutando luego de Editar!!!');                
-        },
-  	});
+  		recarga:true,<br>  		
+  		functionAfter:function(data){<br>               
+          console.log('Ejecutando luego de Cualquier cosa!!!');<br>                
+      },<br>            
+      functionBefore:function(ajustes){<br>                
+          console.log('Ejecutando antes de cualquier cosa!!!');<br>                
+      },<br>
+});<br>
 
