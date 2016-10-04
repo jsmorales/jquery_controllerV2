@@ -26,12 +26,13 @@ functionAfter:function(data){<br>
 },<br>            
 functionBefore:function(ajustes){<br>                
     console.log('Ejecutando antes de cualquier cosa!!!');<br>                
-},<br>
+}<br>
+<hr>
 //-----------------------------------------------------------------<br>
 
 <br>
 
-Ejemplo set del plugin boton:
+<p>Ejemplo set del plugin boton:</p>
 <br>
 $("#btn_xxx").jquery_controllerV2({<br>
   		tipo:'inserta/edita',<br> 
